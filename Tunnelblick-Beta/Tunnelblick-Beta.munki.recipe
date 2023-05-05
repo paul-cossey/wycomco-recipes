@@ -34,10 +34,15 @@
 # https://groups.google.com/forum/#!topic/tunnelblick-discuss/UYeR7vv_rXM
 
 # setup folders and secure Tunnelblick app
-/Applications/Tunnelblick.app/Contents/Resources/installer 5
+/Applications/Tunnelblick.app/Contents/Resources/installer 4
+/Applications/Tunnelblick.app/Contents/Resources/installer 5  # not defined in defines.h, but proposed by Tunnelblick developer
 
 # secure configurations
 /Applications/Tunnelblick.app/Contents/Resources/installer 16
+
+# disable auto update
+defaults write "/Library/Application Support/Tunnelblick/forced-preferences" updateCheckAutomatically FALSE
+chmod 644 "/Library/Application Support/Tunnelblick/forced-preferences.plist"
 			</string>
 			<key>unattended_install</key>
 			<true/>
